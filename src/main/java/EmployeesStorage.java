@@ -1,9 +1,10 @@
+import java.util.ArrayList;
 import java.util.List;
 
-public interface EmployeesMethods {
+public interface EmployeesStorage {
 
-    Employee toAdd(Employee employee);
-    void toRemove(Employee employee);
+    void toAdd(Employee employee);
+    Employee toRemove(Employee employee);
     Employee toChange(Employee employee, Employee newEmployee);
     Employee toFindEmployee(String surname);
 

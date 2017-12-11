@@ -19,8 +19,6 @@ public class EmployeeApp {
         list.add(new Employee("Vaca","Ivanov",300));
         list.add(new Employee("Tania","Azarova",500));
 
-        List<EmployeeStorage> employees = new ArrayList<>();
-
 
         for (int i = 0; i < list.size(); i++) {
             System.out.println(list.get(i));

@@ -1,6 +1,7 @@
 import java.util.ArrayList;
+import java.util.List;
 
-public class Employee {
+public class Employee{
 
     private String name;
     private String surname;
@@ -13,6 +14,9 @@ public class Employee {
     }
 
     public Employee() {
+    }
+
+    public Employee(Object object) {
 
     }
 
@@ -23,6 +27,7 @@ public class Employee {
     public void setName(String name) { this.name = name; }
     public void setSurname(String surname) { this.surname = surname; }
     public void setSalary(int salary) { this.salary = salary; }
+
 
     @Override
     public boolean equals(Object object) {
@@ -44,11 +49,12 @@ public class Employee {
         return result;
     }
 
-//    @Override
-//    public String toString() {
-//        return "Employee " +
-//                "имя = '" + name + '\'' +
-//                ", фамилия = '" + surname + '\'' +
-//                ", зарплата = " + salary ;
-//    }
+    @Override
+    public String toString() {
+        return "Employee " +
+                "имя = '" + name + '\'' +
+                ", фамилия = '" + surname + '\'' +
+                ", зарплата = " + salary ;
+    }
+
 }
