@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.List;
 
 public class TempEmployee {
@@ -23,18 +22,20 @@ public class TempEmployee {
         return null;
     }
 
-    public Employee toChange(Employee employee, Employee newEmployee) {
+    public void toChange(Employee employee, Employee newEmployee) {
         List<Employee> list = storage.getAll();
-        for (int i = 0; i < list.size(); i++) {
-            list.set(list.indexOf(employee),newEmployee);
+        if (list.indexOf(employee) == -1){
+            throw new IllegalArgumentException("Нет такого");
         }
-        return employee;
+        list.set(list.indexOf(employee),newEmployee);
     }
 
     public Employee toFindEmployee(String surname) {
         List<Employee> list = storage.getAll();
-        for (int i = 0; i < list.size(); i++) {
-
+        for (Employee employee: list){
+           if(employee.getSurname().equals(surname)){
+               return employee;
+           }
         }
         return null;
     }

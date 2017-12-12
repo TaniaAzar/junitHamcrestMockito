@@ -5,7 +5,7 @@ public interface EmployeesStorage {
 
     void toAdd(Employee employee);
     Employee toRemove(Employee employee);
-    Employee toChange(Employee employee, Employee newEmployee);
+    void toChange(Employee employee, Employee newEmployee);
     Employee toFindEmployee(String surname);
 
     List<Employee> getAll();
