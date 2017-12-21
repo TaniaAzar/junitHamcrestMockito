@@ -16,17 +16,26 @@ public class Employee{
     public Employee() {
     }
 
-    public Employee(Object object) {
-
-    }
-
     //getter and setter
     public String getName() { return name; }
     public String getSurname() { return surname; }
     public int getSalary() { return salary; }
-    public void setName(String name) { this.name = name; }
-    public void setSurname(String surname) { this.surname = surname; }
-    public void setSalary(int salary) { this.salary = salary; }
+    public void setName(String name) {
+        if (name == null){
+            throw new IllegalArgumentException("Имя не должно быть пустым");
+        }this.name = name;
+    }
+    public void setSurname(String surname) {
+        if (surname == null){
+            throw new IllegalArgumentException("Фамилия не должна быть пустой");
+        }this.surname = surname;
+    }
+    public void setSalary(int salary) {
+        if (getSalary() <= 0){
+            throw new IllegalArgumentException("Зарплата не должна быть пустой");
+        }
+        this.salary = salary;
+    }
 
 
     @Override

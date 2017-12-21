@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<employees>
+    <employee>
+        <name>Pavel</name>
+        <surname>Ivanov</surname>
+        <salary>300</salary>
+    </employee>
+    <employee>
+        <name>Sergey</name>
+        <surname>Petrov</surname>
+        <salary>450</salary>
+    </employee>
+    <employee>
+        <name>Katia</name>
+        <surname>Sedorova</surname>
+        <salary>560</salary>
+    </employee>
+</employees>
